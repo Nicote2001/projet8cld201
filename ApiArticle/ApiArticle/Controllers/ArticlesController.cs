@@ -61,5 +61,15 @@ namespace ApiArticle.Controllers
             strings.Add("oui");
             return articles;
         }
+
+        [HttpPost]
+        [Route("add")]
+        public Article Add(Article item1)
+        {
+            var item2 = item1;
+
+            Console.WriteLine(item1.Name);
+            return item2;
+        }
     }
 }

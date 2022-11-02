@@ -1,0 +1,35 @@
+<p>ajout-blog works!</p>
+<h1 class="inputAccount">AJOUTER ARTICLE</h1>
+<div style="width: 50rem;">
+    <div class="form-outline mb-4">
+        <input type="text" id="form1Example13" class="form-control form-control-lg active" [(ngModel)]="title" />
+        <label class="form-label" for="form1Example13">title</label>
+        <div class="form-notch">
+          <div class="form-notch-leading" style="width: 9px; "></div>
+          <div class="form-notch-middle" style="width: 65px; "></div>
+          <div class="form-notch-trailing"></div>
+        </div>
+      </div>
+      <div class="form-outline mb-4">
+        <input type="text" id="form1Example13" class="form-control form-control active" [(ngModel)]="text" />
+        <label class="form-label" for="form1Example13">text</label>
+        <div class="form-notch">
+          <div class="form-notch-leading" style="width: 9px; "></div>
+          <div class="form-notch-middle" style="width: 65px; "></div>
+          <div class="form-notch-trailing"></div>
+        </div>
+      </div>
+      <div class="form-outline mb-4">
+        <input type="text" id="form1Example13" class="form-control form-control-lg active" [(ngModel)]="autor" />
+        <label class="form-label" for="form1Example13">Username</label>
+        <div class="form-notch">
+          <div class="form-notch-leading" style="width: 9px; "></div>
+          <div class="form-notch-middle" style="width: 65px; "></div>
+          <div class="form-notch-trailing"></div>
+        </div>
+      </div>
+</div>
+  <button type="button" class="btn btn-warning" (click)="save()">
+    Save
+  </button>
+
