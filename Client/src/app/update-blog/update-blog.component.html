@@ -1,1 +1,36 @@
 <p>update-blog works!</p>
+<h1 class="inputAccount">AJOUTER ARTICLE</h1>
+<div style="width: 50rem;">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form1Example13">title</label>
+        <input type="text" id="form1Example13" value="{{name}}" class="form-control form-control-lg active" [(ngModel)]="name" />
+        <div class="form-notch">
+          <div class="form-notch-leading" style="width: 9px; "></div>
+          <div class="form-notch-middle" style="width: 65px; "></div>
+          <div class="form-notch-trailing"></div>
+        </div>
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form1Example13">text</label>
+        <input type="text" id="form1Example13" value="{{text}}" class="form-control form-control active" [(ngModel)]="text" />
+        <div class="form-notch">
+          <div class="form-notch-leading" style="width: 9px; "></div>
+          <div class="form-notch-middle" style="width: 65px; "></div>
+          <div class="form-notch-trailing"></div>
+        </div>
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form1Example13">Autor</label>
+        <input type="text" id="form1Example13" value="{{autor}}" class="form-control form-control-lg active" [(ngModel)]="autor" />
+        <div class="form-notch">
+          <div class="form-notch-leading" style="width: 9px; "></div>
+          <div class="form-notch-middle" style="width: 65px; "></div>
+          <div class="form-notch-trailing"></div>
+        </div>
+      </div>
+</div>
+  <button type="button" class="btn btn-warning" (click)="save()">
+    update
+  </button>
+
+

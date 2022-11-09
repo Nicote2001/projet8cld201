@@ -2,20 +2,20 @@
 {
     public class Article
     {
-        public Article(string Id, string Name, string Text, string Autor)
+        public Article(int Id, string Name, string Text, string Autor)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Text = Text;
-            this.Autor = Autor;
+            this.id = Id;
+            this.name = Name;
+            this.text = Text;
+            this.autor = Autor;
         }
 
-        public string Id { get; set; }
+        public int id { get; set; }
 
-        public string Name { get; set; }
+        public string name { get; set; }
 
-        public string Text { get; set; }
+        public string text { get; set; }
 
-        public string Autor { get; set; }
+        public string autor { get; set; }
     }
 }

@@ -24,8 +24,11 @@ export class AjoutBlogComponent implements OnInit {
   save()
   {
     var item  = new Article(1,this.title,this.text,this.autor);
-     console.log("je test");
-    this.service.AddArticle(item);
+    this.service.AddArticle(item).subscribe(data => {
+      if(data == true){
+        alert("marche");
+      }
+    });
   }
 
 }

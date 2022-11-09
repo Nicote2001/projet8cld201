@@ -1,5 +1,19 @@
-<p>home works!</p>
-<div *ngFor="
-    let article of articles">
-      {{article.name}}
-</div>
+<div class="col-12 ">
+  <h3>Articles</h3>
+    <div class="row  row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-3 row-cols-xxl-4  ">
+        <div class="card-container-size d-flex justify-content-center" *ngFor="
+        let article of articles">
+              <button class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{article.name}}</h5>
+                  <p class="card-title">{{article.text}}</p>
+                  <h5 class="card-title">PRIX : {{article.autor}}</h5>
+                  <button type="button" class="btn btn-warning" (click)="GoToUpdate(article.name)">Modifier</button>
+                  <button type="button" class="btn btn-danger" (click)="Delete(article.name)">Supprimer</button>
+                </div>
+              </button>
+            </div> 
+    </div>
+  </div>
+
+

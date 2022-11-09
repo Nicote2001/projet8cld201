@@ -8,7 +8,7 @@ const routes: Routes =
 [
     {path: '', component: HomeComponent},
     {path: 'ajouter', component: AjoutBlogComponent},
-    {path: 'modifier/:id', component: UpdateBlogComponent},
+    {path: 'modifier/:name', component: UpdateBlogComponent},
     {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 

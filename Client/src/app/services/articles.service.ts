@@ -17,9 +17,22 @@ export class ArticlesService {
         return this.http.get<any>(`${this.baseUri}/articles`);
     }
 
-    AddArticle(article : Article)
+    getArticle(article : any) {
+        return this.http.post<any>(`${this.baseUri}/articles/getarticle/`,article);
+    }
+
+    AddArticle(article : any)
     {
-        console.log("oui 2")
-        return this.http.get<any>(`${this.baseUri}/add`);
+        return this.http.post<any>(`${this.baseUri}/articles/`,article);
+    }
+
+    Update(article : any)
+    {
+        return this.http.post<any>(`${this.baseUri}/articles/update`,article);
+    }
+
+    Delete(article : any)
+    {
+        return this.http.post<any>(`${this.baseUri}/articles/delete`,article);
     }
 }

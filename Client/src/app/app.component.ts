@@ -13,22 +13,6 @@ export class AppComponent {
 
   constructor(private articleServices : ArticlesService)
   {
-    this.getarticles();
-  }
-
-  async getarticles()
-  {
-    await this.getarticlesCall();
-    console.log("oui", this.articles);
-  }
-
-
-  async getarticlesCall()
-  {
-    this.articleServices.getAll().subscribe(data => {
-      console.log(data);
-      this.articles = data;
-    });
   }
 }
 

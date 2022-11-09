@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Article } from '../object/article';
 import { ArticlesService } from '../services/articles.service';
 
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   articles : Article[];
 
-  constructor(private articleServices : ArticlesService)
+  constructor(private articleServices : ArticlesService,private router: Router)
   {
     this.getarticles();
   }
@@ -22,14 +23,37 @@ export class HomeComponent implements OnInit {
   async getarticles()
   {
     await this.getarticlesCall();
-    console.log("oui", this.articles);
+  }
+
+  async GoToUpdate(name : string)
+  {
+    this.router.navigateByUrl(`modifier/${name}`)
+  }
+
+ delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
+  async Delete(name : string)
+  {
+    await this.deleteCall(name);
+    await this.delay(1000);
+    this.getarticles();
+  }
+
+  async deleteCall(name : string){
+    this.articleServices.Delete(new Article(1,name,"","")).subscribe(data => {
+      if(data == true)
+      {
+          alert("delete reéussie")
+      }
+    });
   }
 
 
   async getarticlesCall()
   {
     this.articleServices.getAll().subscribe(data => {
-      console.log(data);
       this.articles = data;
     });
   }
