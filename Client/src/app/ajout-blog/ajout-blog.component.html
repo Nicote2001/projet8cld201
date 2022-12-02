@@ -1,34 +1,22 @@
-<h1 class="inputAccount">AJOUTER UN ARTICLE</h1>
-<div style="width: 50rem;">
+<h1 class="t-center">AJOUTER UN ARTICLE</h1>
+<hr class="hr" />
+<div class="center">
     <div class="form-outline mb-4">
-        <input type="text" id="form1Example13" class="form-control form-control-lg active" [(ngModel)]="title" />
-        <label class="form-label" for="form1Example13">Titre</label>
-        <div class="form-notch">
-          <div class="form-notch-leading" style="width: 9px; "></div>
-          <div class="form-notch-middle" style="width: 65px; "></div>
-          <div class="form-notch-trailing"></div>
-        </div>
-      </div>
-      <div class="form-outline mb-4">
-        <input type="text" id="form1Example13" class="form-control form-control active" [(ngModel)]="text" />
-        <label class="form-label" for="form1Example13">Texte</label>
-        <div class="form-notch">
-          <div class="form-notch-leading" style="width: 9px; "></div>
-          <div class="form-notch-middle" style="width: 65px; "></div>
-          <div class="form-notch-trailing"></div>
-        </div>
-      </div>
-      <div class="form-outline mb-4">
-        <input type="text" id="form1Example13" class="form-control form-control-lg active" [(ngModel)]="autor" />
-        <label class="form-label" for="form1Example13">Auteur</label>
-        <div class="form-notch">
-          <div class="form-notch-leading" style="width: 9px; "></div>
-          <div class="form-notch-middle" style="width: 65px; "></div>
-          <div class="form-notch-trailing"></div>
-        </div>
-      </div>
+      <label class="form-label" for="id-title">Titre</label>
+      <input type="text" id="id-title" class="form-control form-control-lg" [(ngModel)]="name" />
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="id-text" >Texte</label>
+      <input type="text" id="id-text" class="form-control form-control-lg" [(ngModel)]="text" />
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="id-autor">Auteur</label>
+      <input type="text" id="id-autor" class="form-control form-control-lg" [(ngModel)]="autor" />
+    </div>
+    <button type="button" class="btn btn-secondary">
+      <a class="back" [routerLink]="['/']">Retour</a>
+    </button>
+    <button type="button" class="btn btn-primary" (click)="save()">
+      Enregistrer
+    </button>
 </div>
-  <button type="button" class="btn btn-warning" (click)="save()">
-    Enregistrer
-  </button>
-

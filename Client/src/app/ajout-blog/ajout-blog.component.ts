@@ -11,7 +11,7 @@ import { ArticlesService } from '../services/articles.service';
 })
 export class AjoutBlogComponent implements OnInit {
 
-  title:string = " ";
+  name:string = " ";
   text:string = " ";
   autor:string = " ";
   
@@ -23,7 +23,7 @@ export class AjoutBlogComponent implements OnInit {
 
   save()
   {
-    var item  = new Article(1,this.title,this.text,this.autor);
+    var item  = new Article(1,this.name,this.text,this.autor);
     this.service.AddArticle(item).subscribe(data => {
       if(data == true){
         alert("marche");
