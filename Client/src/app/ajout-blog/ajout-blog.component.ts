@@ -26,7 +26,10 @@ export class AjoutBlogComponent implements OnInit {
     var item  = new Article(1,this.name,this.text,this.autor);
     this.service.AddArticle(item).subscribe(data => {
       if(data == true){
-        alert("marche");
+        alert("L'article \"" + this.name + "\" a été ajouté avec succès!");
+      }else
+      {
+        alert("Une erreur est survenu lors de l'enregistrement!");
       }
     });
   }

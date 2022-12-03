@@ -43,9 +43,11 @@ export class HomeComponent implements OnInit {
 
   async deleteCall(name : string){
     this.articleServices.Delete(new Article(1,name,"","")).subscribe(data => {
-      if(data == true)
+      if(data == true){
+        alert("L'article \"" + name + "\" a été supprimé avec succès!");
+      }else
       {
-          alert("delete reéussie")
+        alert("Une erreur est survenu lors de la suppression!");
       }
     });
   }
